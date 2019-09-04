@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: space-around ;
+    height: 150px;
+    margin:50px;
+    background:#EECFBA;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.6);
+
+    background: -webkit-linear-gradient(45deg, #EECFBA, #C5DDE8);
+
+}
+
+.description {
+   text-align: center;
+   padding-bottom: 30px;
+   font-style: italic;
+}
+.iq, .ia, .mbti{
+    text-align: center;
+    padding-top: 30px;
+}
