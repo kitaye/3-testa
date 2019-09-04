@@ -30,5 +30,6 @@ main{
 .name {
     text-align: center;
     font-weight: bold;
+    padding-bottom: 10px;
 
 }
