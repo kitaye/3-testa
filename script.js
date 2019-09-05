@@ -29,11 +29,11 @@ function showTest(test){
 function hideMain() {
     let el = document.querySelector('main');
 
-    if(el.style.display !== 'none') {
+    // if(el.style.display !== 'none') {
         el.style.display = 'none';
-    }
-    else {
-        el.style.display = 'block';
-    }
+    // }
+    // else {
+    //     el.style.display = 'block';
+    // }
 }
 

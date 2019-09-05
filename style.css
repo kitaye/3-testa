@@ -3,14 +3,12 @@ main{
     flex-direction: column ;
     justify-content: space-between;
 }
-p{
-    display: flex;
+.iq_test, .ia_test, .mbti_test, .smil_test{
     border: 3px solid #a9a9a9;
     background: #d3d3d3;
-    justify-content: center;
-    width: 300px;
-    padding: 20em;
     color: #708090;
+    margin:20px 40px;
+    padding: 50px 70px;
 }
 .container{
     display: flex;
