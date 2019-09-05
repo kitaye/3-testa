@@ -1,8 +1,13 @@
+main{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
 .container{
     display: flex;
     justify-content: space-around ;
-    height: 150px;
-    margin:50px;
+    height: 120px;
+    margin:20px 40px;
     background:#EECFBA;
     border-radius: 5px;
     box-shadow: 0 8px 15px rgba(0,0,0,.6);
@@ -12,11 +17,19 @@
 }
 
 .description {
-   text-align: center;
-   padding-bottom: 30px;
-   font-style: italic;
-}
-.iq, .ia, .mbti{
     text-align: center;
-    padding-top: 30px;
+    /*padding-bottom: 30px;*/
+    /*margin: 10em;*/
+    font-style: italic;
+}
+.iq, .ia, .mbti, .smil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+
 }
