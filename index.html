@@ -7,7 +7,7 @@
 </head>
 <body>
 <main>
-    <div  id="iq" class="main container iq">
+    <div  class="main container iq">
         <div class="name iq">TEST IQ</div>
         <div class="description iq">
             The IQ test measures the  intelligence level
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div id="ia" class=" main container ia">
+    <div class=" main container ia">
         <div class="name ia" >TEST PAEI (Izchak Adizes)</div>
         <div class="description ia">
             The PAEI Management Model, developed by Dr. Izchak Adizes, is a popular method method
@@ -24,7 +24,7 @@
             <br><strong>“work personality” and which role they play within a team</strong>.</div>
     </div>
 
-    <div  id="mbti" class=" main container mbti">
+    <div  class=" main container mbti">
         <div class="name mbti" >TEST MBTI </div>
         <div class="description mbti">
             The Myers–Briggs Type Indicator (MBTI) is an introspective self-report test
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div  id="smil" class=" main container smil">
+    <div class=" main container smil">
         <div class="name smil" >TEST MMPI(СМИЛ)</div>
         <div class="description smil">
             The Minnesota Multiphasic Personality Inventory (MMPI) test explores
@@ -42,34 +42,101 @@
             В основу методики положена статистически достоверная математическая база.
         </div>
     </div>
-
 </main>
-<section class="tests">
 
-<!--    IQ test-->
-    <div class=" section iq_test" style="display: none">
-        <p>HERE WILL BE THE IQ TEST BUT NOW YOU CAN
-        <a href="https://www.funeducation.com/Tests/IQTest/TakeTest.aspx"> CLICK HERE TO PASS THE TEMPORARY IQ TEST</a>
-        </p>
+<section class="tests">
+    <!--    IQ test-->
+    <div class="section iq_test">
+        <div class=" iq intro">
+            <h1>IQ TEST</h1>
+            <img src="IQ_graph.jpeg" alt="IQ Graph">
+            <p> <button class="btn"> Take The Test!</button></p>
+        </div>
+        <div class="iq q1">
+            <div class="answer-section viewport-section in-viewport">
+                <div class="curve curve-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" preserveAspectRatio="none" style="fill: hsl(231, 18%, 91%);"><path d="M0,0v50h50C22.4,50,0,0,0,0z"></path><path d="M50,50h50V0C100,0,77.6,50,50,50z"></path></svg>
+                </div>
+
+                <div class="container">
+                    <div class="answer-block ae-1" style="padding-top: 30px;">
+                        <span class="info"><mark>1. </mark>The word "racecar" is spelled the same forwards and backwards. </span>
+                        <input type="hidden" name="inpAnswer_8529" id="inpAnswer_8529"><div class="asnwer-row" onclick="document.getElementById('inpAnswer_8529').value='29051';submitRadioClick();">
+                        <label for="answer0" class="jcf-label-active">
+                            <span class="jcf-radio jcf-checked"><input type="radio" id="answer0" name="answer" style="position: absolute; opacity: 0;"><span></span></span>TRUE
+                        </label>
+                    </div>
+                        <div class="asnwer-row" onclick="document.getElementById('inpAnswer_8529').value='29052';submitRadioClick();">
+                            <label for="answer1">
+                                <span class="jcf-radio jcf-unchecked"><input type="radio" id="answer1" name="answer" style="position: absolute; opacity: 0;"><span></span></span>FALSE
+                            </label>
+                        </div>
+
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$btnSubmitAnswer" value="Continue   >" onclick="return validateForm(this);" id="ctl00_ContentPlaceHolder1_TestEngine1_btnSubmitAnswer" style="display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$btnSubmitAnswer_disabled" value="Please Wait..." id="ctl00_ContentPlaceHolder1_TestEngine1_btnSubmitAnswer_disabled" disabled="disabled" style="display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$quitTest" value="Save &amp; Exit" id="ctl00_ContentPlaceHolder1_TestEngine1_quitTest" disabled="disabled" style="border:thin solid black; font-size:9pt; width: 86px; height: 25px; background-color: #ffffcc; font-family:Arial; color:#333333; display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$quitTest_disabled" value="Save &amp; Exit" id="ctl00_ContentPlaceHolder1_TestEngine1_quitTest_disabled" disabled="disabled" style="border:thin solid black; font-size:9pt; width: 86px; height: 25px; background-color: #ffffcc; font-family:Arial; color:#333333;outline-color: rgb(255, 0, 0); outline-style: solid; outline-width: 1px;display:none;">-->
+<!--                        <span id="errorMessage" style="visibility:hidden;color:Red;font-size:9pt;font-family:Arial;display:none"><br><br>&nbsp;&gt;&nbsp;-->
+<!--        Please Answer All Questions</span>-->
+                    </div>
+                </div>
+                <div class="curve curve-bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" preserveAspectRatio="none" class="curve-bottom-in" style="fill: hsl(231, 18%, 91%);"><path d="M0,50V0h50C22.4,0,0,50,0,50z"></path><path d="M50,0h50v50C100,50,77.6,0,50,0z"></path></svg>
+                </div>
+            </div>
+        </div>
+        <div class="iq q2">
+            <div class="answer-section viewport-section in-viewport">
+                <div class="curve curve-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" preserveAspectRatio="none" style="fill: hsl(231, 18%, 91%);"><path d="M0,0v50h50C22.4,50,0,0,0,0z"></path><path d="M50,50h50V0C100,0,77.6,50,50,50z"></path></svg>
+                </div>
+
+                <div class="container">
+                    <div class="answer-block ae-1" style="padding-top: 30px;">
+                        <span class="info"><mark>2. </mark>Two of the following numbers add up to seventeen. &nbsp;&nbsp; 6 - 13 - 2 - 12 - 7 - 14 </span>
+                        <input type="hidden" name="inpAnswer_8530" id="inpAnswer_8530"><div class="asnwer-row" onclick="document.getElementById('inpAnswer_8530').value='28946';submitRadioClick();">
+                        <label for="answer0">
+                            <span class="jcf-radio jcf-unchecked"><input type="radio" id="answer0" name="answer" style="position: absolute; opacity: 0;"><span></span></span>FALSE
+                        </label>
+                    </div>
+                        <div class="asnwer-row" onclick="document.getElementById('inpAnswer_8530').value='28947';submitRadioClick();">
+                            <label for="answer1">
+                                <span class="jcf-radio jcf-unchecked"><input type="radio" id="answer1" name="answer" style="position: absolute; opacity: 0;"><span></span></span>TRUE
+                            </label>
+                        </div>
+
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$btnSubmitAnswer" value="Continue   >" onclick="return validateForm(this);" id="ctl00_ContentPlaceHolder1_TestEngine1_btnSubmitAnswer" style="display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$btnSubmitAnswer_disabled" value="Please Wait..." id="ctl00_ContentPlaceHolder1_TestEngine1_btnSubmitAnswer_disabled" disabled="disabled" style="display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$quitTest" value="Save &amp; Exit" id="ctl00_ContentPlaceHolder1_TestEngine1_quitTest" disabled="disabled" style="border:thin solid black; font-size:9pt; width: 86px; height: 25px; background-color: #ffffcc; font-family:Arial; color:#333333; display:none;">-->
+<!--                        <input type="submit" name="ctl00$ContentPlaceHolder1$TestEngine1$quitTest_disabled" value="Save &amp; Exit" id="ctl00_ContentPlaceHolder1_TestEngine1_quitTest_disabled" disabled="disabled" style="border:thin solid black; font-size:9pt; width: 86px; height: 25px; background-color: #ffffcc; font-family:Arial; color:#333333;outline-color: rgb(255, 0, 0); outline-style: solid; outline-width: 1px;display:none;">-->
+<!--                        <span id="errorMessage" style="visibility:hidden;color:Red;font-size:9pt;font-family:Arial;display:none"><br><br>&nbsp;&gt;&nbsp;-->
+<!--        Please Answer All Questions</span>-->
+                    </div>
+                </div>
+                <div class="curve curve-bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" preserveAspectRatio="none" class="curve-bottom-in" style="fill: hsl(231, 18%, 91%);"><path d="M0,50V0h50C22.4,0,0,50,0,50z"></path><path d="M50,0h50v50C100,50,77.6,0,50,0z"></path></svg>
+                </div>
+            </div>
+        </div>
     </div>
 
-<!--    PAEI test-->
-    <div class=" section ia_test" style="display: none">
-        <p>HERE WILL BE THE IQ TEST BUT NOW YOU CAN
+    <!--    PAEI test-->
+    <div class=" section ia_test">
+        <p>HERE WILL BE THE PAEI TEST BUT NOW YOU CAN
            <a href="http://paei.denero.ru/#test"> CLICK HERE TO PASS THE TEMPORARY PAEI TEST</a>
         </p>
     </div>
 
 <!--    MBTI test-->
-    <div class="section mbti_test" style="display: none">
-        <p>HERE WILL BE THE IQ TEST BUT NOW YOU CAN
+    <div class="section mbti_test">
+        <p>HERE WILL BE THE MBTI TEST BUT NOW YOU CAN
         <a href="https://www.16personalities.com/ru/test-lichnosti"> CLICK HERE TO PASS THE TEMPORARY MBTI TEST</a>
         </p>
     </div>
 
 <!--    SMIL test-->
-    <div class="section smil_test" style="display: none">
-        <p>HERE WILL BE THE IQ TEST BUT NOW YOU CAN
+    <div class="section smil_test">
+        <p>HERE WILL BE THE MMPI TEST BUT NOW YOU CAN
         <a href="https://www.jobtestprep.com/personality-mmpi"> CLICK HERE TO PASS THE TEMPORARY MMPI(СМИЛ) TEST</a>
         </p>
     </div>

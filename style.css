@@ -3,6 +3,10 @@ main{
     flex-direction: column ;
     justify-content: space-between;
 }
+img{
+    width: 700px;
+}
+
 .iq_test, .ia_test, .mbti_test, .smil_test{
     border: 3px solid #a9a9a9;
     background: #d3d3d3;
@@ -18,9 +22,7 @@ main{
     background:#EECFBA;
     border-radius: 5px;
     box-shadow: 0 8px 15px rgba(0,0,0,.6);
-
     background: -webkit-linear-gradient(45deg, #EECFBA, #C5DDE8);
-
 }
 
 .description {
@@ -40,4 +42,40 @@ main{
     font-weight: bold;
     padding: 10px;
 
+}
+.iq_test{
+    display: none;
+}
+.ia_test{
+    display: none;
+}
+.mbti_test{
+    display: none;
+}
+.smil_test{
+    display: none;
+}
+
+.btn {
+    -webkit-transition: background .1s ease-in-out,box-shadow .1s ease-in-out,border-color .1s ease-in-out;
+    transition: background .1s ease-in-out,box-shadow .1s ease-in-out,border-color .1s ease-in-out;
+    border: 1px solid dimgrey;
+    color: #fff;
+    background-color: grey;
+    margin-bottom: .25em;
+    box-shadow: 0 0.25em 0 0  darkgrey, 0 4px 9px slategrey;
+    border-radius: 4px;
+    padding: 15px 20px 16px;
+    font-size: 14px;
+    line-height: 1.1;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+.q1{
+    display: none;
+}
+.q2{
+    display: none;
 }
