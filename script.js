@@ -31,6 +31,22 @@ function showTest(button, elementToHide, elementToShow) {
     });
 }
 
+//IQ TEST
+
+const buttonIQ = document.querySelector('.btn_iq');
+const IqIntro = document.querySelector('.iq_intro');
+const IqQuestion1 = document.querySelector('.iq_q1');
+const IqQuestion2 = document.querySelector('.iq_q2');
+
+const radioButton1 = document.querySelector('#answer0');
+const radioButton2 = document.querySelector('#answer1');
+
+
+showTest(buttonIQ, IqIntro, IqQuestion1);
+showTest(radioButton1, IqQuestion1, IqQuestion2);
+showTest(radioButton2, IqQuestion1, IqQuestion2);
+
+
 
 
 

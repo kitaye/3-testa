@@ -1,3 +1,4 @@
+/*GENERAL*/
 main{
     display: flex;
     flex-direction: column ;
@@ -43,27 +44,27 @@ img{
     padding: 10px;
 
 }
+/*IQ TEST*/
+mark{
+    background-color: transparent;
+    color: inherit;
+}
 .iq_test{
     display: none;
 }
-.ia_test{
-    display: none;
-}
-.mbti_test{
-    display: none;
-}
-.smil_test{
-    display: none;
-}
 
-.btn {
+.info{
+    font-weight: bold;
+    font-size: x-large;
+}
+.btn_iq {
     -webkit-transition: background .1s ease-in-out,box-shadow .1s ease-in-out,border-color .1s ease-in-out;
     transition: background .1s ease-in-out,box-shadow .1s ease-in-out,border-color .1s ease-in-out;
-    border: 1px solid dimgrey;
+    border: 1px solid #696969;
     color: #fff;
-    background-color: grey;
+    background-color: #808080;
     margin-bottom: .25em;
-    box-shadow: 0 0.25em 0 0  darkgrey, 0 4px 9px slategrey;
+    box-shadow: 0 0.25em 0 0  darkgrey, 0 4px 9px #708090;
     border-radius: 4px;
     padding: 15px 20px 16px;
     font-size: 14px;
@@ -73,9 +74,25 @@ img{
     letter-spacing: 1px;
 
 }
-.q1{
+.iq_q1{
     display: none;
 }
-.q2{
+.iq_q2{
+    display: none;
+}
+
+/*PAEI TEST*/
+.ia_test{
+    display: none;
+}
+
+
+/*MBTI TEST*/
+.mbti_test{
+    display: none;
+}
+
+/*SMIL TEST*/
+.smil_test{
     display: none;
 }
