@@ -3,6 +3,13 @@ main{
     flex-direction: column ;
     justify-content: space-between;
 }
+.iq_test, .ia_test, .mbti_test, .smil_test{
+    border: 3px solid #a9a9a9;
+    background: #d3d3d3;
+    color: #708090;
+    margin:20px 40px;
+    padding: 50px 70px;
+}
 .container{
     display: flex;
     justify-content: space-around ;
@@ -27,9 +34,10 @@ main{
     flex-direction: column;
     justify-content: center;
 }
+
 .name {
     text-align: center;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding: 10px;
 
 }
