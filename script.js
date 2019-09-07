@@ -1,8 +1,7 @@
-document.addEventListener('click', (event) => catchClick(event));
+document.addEventListener('click', (event) => catchMainMenuClick(event));
 
-function catchClick(event) {
+function catchMainMenuClick(event) {
     const elementId = event.target.id;
-    console.log(event.target);
     switch(elementId) {
         case 'iq':
             hideMain();
@@ -19,6 +18,7 @@ function catchClick(event) {
         case 'smil':
             hideMain();
             showTest(document.querySelector('.tests__smil'));
+            updateQuestion();
             break;
     }
 }
