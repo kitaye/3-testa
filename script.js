@@ -28,6 +28,13 @@ function showTest(button, elementToHide, elementToShow) {
     button.addEventListener("click", function() {
         elementToHide.style.display = "none";
         elementToShow.style.display = "block";
+        if(elementToShow == testBodySMIL){
+            elementToShow.style.display = "flex";
+            updateQuestion();
+            updateProgressBar();
+            getStartTime();
+            updateTime();
+        }
     });
 }
 
@@ -46,11 +53,7 @@ showTest(buttonIQ, IqIntro, IqQuestion1);
 showTest(radioButton1, IqQuestion1, IqQuestion2);
 showTest(radioButton2, IqQuestion1, IqQuestion2);
 
-
-
-
-
-
+//SMIL TEST
 
 
 

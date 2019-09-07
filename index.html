@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <header>
+    <nav class="header-nav">
+        <a class="header-nav__main-page" href="index.html">Main page</a>
+    </nav>
+</header>   
 <main>
     <div  class="main container iq">
         <div class="name iq">TEST IQ</div>
@@ -117,13 +122,32 @@
     </div>
 
 <!--    SMIL test-->
-    <div class="section smil_test">
-        <p>HERE WILL BE THE MMPI TEST BUT NOW YOU CAN
-        <a href="https://www.jobtestprep.com/personality-mmpi"> CLICK HERE TO PASS THE TEMPORARY MMPI(СМИЛ) TEST</a>
-        </p>
+    <div class="smil_test">
+        <h1 class="smil__header">TEST MMPI</h1>
+        <div class="smil__explain">
+            When passing the test, try not to use the browser navigation tools: “back”, “forward”, “update”.
+            If there is a need to return to previous questions - use the "Back" button below.
+            Try to pass the test in one approach; if you are distracted for more than an hour - it would be better to start the test again.
+            It is not recommended to take the test with an unstable Internet connection (like mobile Internet).
+        </div>
+        <div class = "smil__nav">
+            <button id="smil__nav-back-button" class="smil__nav-back-button">Back</button>
+            <div class="smil__nav-progress-bar">
+                <div id ="smil__nav-progress-bar-fill" class="smil__nav-progress-bar-fill">
+                    <span id="smil__nav-progress-bar-text" class="smil__nav-progress-bar-text"></span>
+                </div>
+            </div>
+            <div id="smil__nav-time" class="smil__nav-time">00:00</div>
+        </div>
+        <div id="smil__question" class="smil__question"></div>
+        <div class ="smil__buttons">
+            <button id="smil__button-right" class="smil__button-right">Yes</button>
+            <button id="smil__button-wrong" class="smil__button-wrong">No</button>
+            <button id="smil__button-unknown" class="smil__button-unknown">Unknow</button>
+        </div>
     </div>
 </section>
-
+<script src="smil_script.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
