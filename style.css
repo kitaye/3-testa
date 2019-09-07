@@ -10,40 +10,45 @@ header {
     color: #000000;
 }
 
+.header-nav__main-page:hover {
+    color: blue;
+}
+
 main{
     display: flex;
-/*    display: none;*/
+    /*display: none;*/
     flex-direction: column ;
     justify-content: space-between;
 }
 
-.container{
+.main__container{
     display: flex;
-    justify-content: space-around ;
-    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
     margin:20px 40px;
     background:#EECFBA;
     border-radius: 5px;
     box-shadow: 0 8px 15px rgba(0,0,0,.6);
     background: -webkit-linear-gradient(45deg, #EECFBA, #C5DDE8);
-
 }
 
-.description {
+.container__name {
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.container__description {
+    text-align: center;
+    font-size: 18px;
     font-style: italic;
 }
 
-.iq, .ia, .mbti, .smil{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.name {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
+.container__name:hover {
+    color: blue;
+    cursor: pointer;
 }
 
 .tests__iq, .tests__ia, .tests__mbti {
@@ -92,7 +97,7 @@ main{
     padding: 5px;
     border: solid 2px black;
     border-radius: 10px;
-    width: 80%;
+    width: 70%;
     text-align: center;
 }
 

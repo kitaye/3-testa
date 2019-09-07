@@ -1,19 +1,23 @@
 document.addEventListener('click', (event) => catchClick(event));
 
 function catchClick(event) {
-    const clickedElement = event.target;
-    hideMain();
-    switch(clickedElement.innerHTML.trim()) {
-        case 'TEST IQ':
+    const elementId = event.target.id;
+    console.log(event.target);
+    switch(elementId) {
+        case 'iq':
+            hideMain();
             showTest(document.querySelector('.tests__iq'));
             break;
-        case 'TEST PAEI (Izchak Adizes)':
+        case 'ia':
+            hideMain();
             showTest(document.querySelector('.tests__ia'));
             break;
-        case 'TEST MBTI':
+        case 'mbti':
+            hideMain();
             showTest(document.querySelector('.tests__mbti'));
             break;
-        case 'TEST MMPI(СМИЛ)':
+        case 'smil':
+            hideMain();
             showTest(document.querySelector('.tests__smil'));
             break;
     }
