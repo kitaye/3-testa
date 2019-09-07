@@ -74,12 +74,10 @@ mark{
     letter-spacing: 1px;
 
 }
-.iq_q1{
+.iq_q1, .iq_q2, .iq_q3{
     display: none;
 }
-.iq_q2{
-    display: none;
-}
+
 
 /*PAEI TEST*/
 .ia_test{
