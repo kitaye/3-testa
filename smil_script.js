@@ -6,25 +6,33 @@ function catchSmilClick(event) {
 		case 'smil__button-right':
 			goNetxQuestion();
 			updateQuestion();
+			updateProgressBar();
 			break;
 		case 'smil__button-wrong':
 			goNetxQuestion();
 			updateQuestion();
+			updateProgressBar();
 			break;
 		case 'smil__button-unknown':
 			goNetxQuestion();
 			updateQuestion();
+			updateProgressBar();
 			break;
 		case 'smil__nav-back-button':
 			goPreviewsQuestion();
 			updateQuestion();
+			updateProgressBar();
 			break;
 	}
 }
 
 let questionNumber = 0;
 let questions = readQuestionList();
-let smil__question = document.getElementById('smil__question');
+let smillQuestion = document.getElementById('smil__question');
+let smillBarFill = document.getElementById('smil__nav-progress-bar-fill');
+let smillBarText = document.getElementById('smil__nav-progress-bar-text');
+let smillTime = document.getElementById('smil__nav-time');
+let startTime = 0;
 
 function readQuestionList() {
 	let questionsList = ['Я всегда говорю только правду.',
@@ -37,7 +45,7 @@ function readQuestionList() {
 
 function updateQuestion() {
 	let question = questions[questionNumber];
-	smil__question.innerHTML = question;
+	smillQuestion.innerHTML = question;
 }
 
 function goNetxQuestion() {
@@ -53,5 +61,32 @@ function goPreviewsQuestion() {
 }
 
 function updateProgressBar() {
-	
+	smillBarText.innerHTML = 'Вопрос ' + (questionNumber + 1) + ' из ' + questions.length;
+	let widthBar = ((questionNumber + 1) * 100) /  questions.length;
+	console.log(widthBar);
+	smillBarFill.style.width = widthBar + '%';
+}
+
+function getStartTime() {
+	startTime = new Date();
+}
+
+function updateTime() {  
+	setInterval(() => {
+	let currentTime = new Date(); 
+	let resultTime = currentTime - startTime;
+	let seconds = Math.round(resultTime/1000);
+	let minutes = seconds/60;
+	let hours = minutes/60;
+	let time;
+	if (hours > 1) {
+		time = hours + ':' + minutes + ':' + seconds;
+	} else if(minutes > 1) {
+		time = minutes + ':' + seconds;
+	} else if(seconds > 9) {
+		time = '00:' + seconds;
+	} else {
+		time = '00:0' + seconds; 
+	}
+  smillTime.innerHTML = time;}, 1000);
 }

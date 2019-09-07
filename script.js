@@ -19,6 +19,9 @@ function catchMainMenuClick(event) {
             hideMain();
             showTest(document.querySelector('.tests__smil'));
             updateQuestion();
+            updateProgressBar();
+            getStartTime();
+            updateTime();
             break;
     }
 }
