@@ -1,3 +1,12 @@
+let questionNumber = 0;
+let questions = readQuestionList();
+let smillQuestion = document.getElementById('smil__question');
+let smillBarFill = document.getElementById('smil__nav-progress-bar-fill');
+let smillBarText = document.getElementById('smil__nav-progress-bar-text');
+let smillTime = document.getElementById('smil__nav-time');
+let smillWrapper = document.getElementById('test__smil-wrapper');
+let smillIntro = document.getElementById('test__smil-intro');
+let startTime = 0;
 document.addEventListener('click', (event) => catchSmilClick(event));
 
 function catchSmilClick(event) {
@@ -23,16 +32,20 @@ function catchSmilClick(event) {
 			updateQuestion();
 			updateProgressBar();
 			break;
+		case 'smil-intro__start-button':
+			startTest();
+			break;
 	}
 }
 
-let questionNumber = 0;
-let questions = readQuestionList();
-let smillQuestion = document.getElementById('smil__question');
-let smillBarFill = document.getElementById('smil__nav-progress-bar-fill');
-let smillBarText = document.getElementById('smil__nav-progress-bar-text');
-let smillTime = document.getElementById('smil__nav-time');
-let startTime = 0;
+function startTest() {
+	smillIntro.style.display = 'none';
+	smillWrapper.style.display = 'flex';
+	updateQuestion();
+  updateProgressBar();
+  getStartTime();
+  updateTime();
+}
 
 function readQuestionList() {
 	let questionsList = ['I always tell only the truth.',
