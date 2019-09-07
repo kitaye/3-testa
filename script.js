@@ -1,39 +1,28 @@
 document.addEventListener('click', (event) => catchClick(event));
 
-
-
 function catchClick(event) {
     const clickedElement = event.target;
     hideMain();
     switch(clickedElement.innerHTML.trim()) {
         case 'TEST IQ':
-            showTest(document.querySelector('.iq_test'));
+            showTest(document.querySelector('.tests__iq'));
             break;
         case 'TEST PAEI (Izchak Adizes)':
-            showTest(document.querySelector('.ia_test'));
+            showTest(document.querySelector('.tests__ia'));
             break;
         case 'TEST MBTI':
-            showTest(document.querySelector('.mbti_test'));
+            showTest(document.querySelector('.tests__mbti'));
             break;
         case 'TEST MMPI(СМИЛ)':
-            showTest(document.querySelector('.smil_test'));
+            showTest(document.querySelector('.tests__smil'));
             break;
     }
-
 }
 
 function showTest(test){
-    test.style.display = "block";
+    test.style.display = 'flex';
 }
 
 function hideMain() {
-    let el = document.querySelector('main');
-
-    // if(el.style.display !== 'none') {
-        el.style.display = 'none';
-    // }
-    // else {
-    //     el.style.display = 'block';
-    // }
+    document.querySelector('main').style.display = 'none';
 }
-

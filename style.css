@@ -1,15 +1,22 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.header-nav__main-page {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+
 main{
     display: flex;
+/*    display: none;*/
     flex-direction: column ;
     justify-content: space-between;
 }
-.iq_test, .ia_test, .mbti_test, .smil_test{
-    border: 3px solid #a9a9a9;
-    background: #d3d3d3;
-    color: #708090;
-    margin:20px 40px;
-    padding: 50px 70px;
-}
+
 .container{
     display: flex;
     justify-content: space-around ;
@@ -18,17 +25,15 @@ main{
     background:#EECFBA;
     border-radius: 5px;
     box-shadow: 0 8px 15px rgba(0,0,0,.6);
-
     background: -webkit-linear-gradient(45deg, #EECFBA, #C5DDE8);
 
 }
 
 .description {
     text-align: center;
-    /*padding-bottom: 30px;*/
-    /*margin: 10em;*/
     font-style: italic;
 }
+
 .iq, .ia, .mbti, .smil{
     display: flex;
     flex-direction: column;
@@ -39,5 +44,88 @@ main{
     text-align: center;
     font-weight: bold;
     padding: 10px;
+}
 
+.tests__iq, .tests__ia, .tests__mbti {
+    display: none;
+}
+.tests__smil {
+    display: none;  
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    color: #000000;
+}
+
+.smil__header {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.smil__explain {
+    width: 60%;
+    text-align: center;
+    font-size: 17px;
+    font-style: italic;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.smil__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.smil__nav-back-button {
+    font-size: 17px;
+    padding: 5px 20px 5px 20px;
+}
+
+.smil__nav-progress-bar {
+    font-size: 17px;
+    padding: 5px;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.smil__nav-time {
+    font-size: 17px;
+    padding: 5px 20px 5px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+.smil__question {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.smil__buttons {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.smil__button-right {
+    margin-right: 80px;
+    font-size: 17px;
+    padding: 5px 40px 5px 40px;
+}
+
+.smil__button-wrong {
+    margin-right: 80px;
+    font-size: 17px;
+    padding: 5px 40px 5px 40px;
+}
+.smil__button-unknown {
+    font-size: 17px;
+    padding: 5px 20px 5px 20px;
 }
