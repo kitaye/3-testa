@@ -132,7 +132,11 @@
                 Try to pass the test in one approach; if you are distracted for more than an hour - it would be better to start the test again.<br>
                 It is not recommended to take the test with an unstable Internet connection (like mobile Internet).<br>
             </div>
-            <button id="smil-intro__start-button" class="smil-intro__start-button">Start Test</button>
+            <div class="smil-intro__start">
+                <div class="smil-intro__start-hint">Введите ваше имя пожалуйста</div>
+                <input id="smil-intro__start-name" class="smil-intro__start-name" maxlength="20" size="30" value="Имя">
+                <button id="smil-intro__start-button" class="smil-intro__start-button">Start Test</button>
+            </div>
         </div>
         <div id="test__smil-wrapper" class="test__smil-wrapper">
             <h1 class="smil__header">TEST MMPI</h1>
@@ -160,6 +164,7 @@
         </div>
     </div>
 </section>
+<script src="user.js"></script>
 <script src="smil_script.js"></script>
 <script src="script.js"></script>
 </body>

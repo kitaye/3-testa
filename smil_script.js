@@ -6,34 +6,40 @@ let smillBarText = document.getElementById('smil__nav-progress-bar-text');
 let smillTime = document.getElementById('smil__nav-time');
 let smillWrapper = document.getElementById('test__smil-wrapper');
 let smillIntro = document.getElementById('test__smil-intro');
+let smillNameField = document.getElementById('smil-intro__start-name');
 let startTime = 0;
+let smillUser;
+
 document.addEventListener('click', (event) => catchSmilClick(event));
 
 function catchSmilClick(event) {
 	const elementId = event.target.id
 	switch(elementId) {
-		case 'smil__button-right':
-			goNetxQuestion();
-			updateQuestion();
-			updateProgressBar();
-			break;
-		case 'smil__button-wrong':
-			goNetxQuestion();
-			updateQuestion();
-			updateProgressBar();
-			break;
-		case 'smil__button-unknown':
-			goNetxQuestion();
-			updateQuestion();
-			updateProgressBar();
+		case 'smil-intro__start-button':
+			startTest();
 			break;
 		case 'smil__nav-back-button':
 			goPreviewsQuestion();
 			updateQuestion();
 			updateProgressBar();
 			break;
-		case 'smil-intro__start-button':
-			startTest();
+		case 'smil__button-right':
+			addAnswer('yes', questionNumber);
+			goNetxQuestion();
+			updateQuestion();
+			updateProgressBar();
+			break;
+		case 'smil__button-wrong':
+			addAnswer('no', questionNumber);
+			goNetxQuestion();
+			updateQuestion();
+			updateProgressBar();
+			break;
+		case 'smil__button-unknown':
+			addAnswer('unknow', questionNumber);
+			goNetxQuestion();
+			updateQuestion();
+			updateProgressBar();
 			break;
 	}
 }
@@ -41,6 +47,7 @@ function catchSmilClick(event) {
 function startTest() {
 	smillIntro.style.display = 'none';
 	smillWrapper.style.display = 'flex';
+	smillUser = new User(smillNameField.value);
 	updateQuestion();
   updateProgressBar();
   getStartTime();
@@ -54,6 +61,10 @@ function readQuestionList() {
 	                 'I am a completely healthy person.',
 	                 'I often have a sad mood.']
 	return questionsList;
+}
+
+function addAnswer(answer, number) {
+	smillUser.addAnswer(answer, number);
 }
 
 function updateQuestion() {
