@@ -2,7 +2,7 @@ let questionNumber = 0;
 let questions = readQuestionList();
 let smillQuestion = document.getElementById('smil__question');
 let smillBarFill = document.getElementById('smil__nav-progress-bar-fill');
-let smillBarText = document.getElementById('smil__nav-progress-bar-text');
+let smillBarText = document.getElementById('smill__question-count');
 let smillTime = document.getElementById('smil__nav-time');
 let smillWrapper = document.getElementById('test__smil-wrapper');
 let smillIntro = document.getElementById('test__smil-intro');
@@ -59,7 +59,12 @@ function readQuestionList() {
 	                 'My affairs are worse than others.',
 	                 'I will not begin to tell everything about myself to even a loved one.',
 	                 'I am a completely healthy person.',
-	                 'I often have a sad mood.']
+	                 'I often have a sad mood.',
+	                 'I do not care if the people around me like me.',
+	                 'I strive to succeed in life.',
+	                 'My character is too soft.',
+	                 'I strive to defend my opinion at all costs.',
+	                 'Often I worry about nothing.']
 	return questionsList;
 }
 
@@ -87,6 +92,7 @@ function goPreviewsQuestion() {
 function updateProgressBar() {
 	smillBarText.innerHTML = 'Question ' + (questionNumber + 1) + ' from ' + questions.length;
 	let widthBar = ((questionNumber + 1) * 100) /  questions.length;
+	console.log(widthBar);
 	smillBarFill.style.width = widthBar + '%';
 }
 
