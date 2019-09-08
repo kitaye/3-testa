@@ -4,7 +4,7 @@ class User {
 		this.answers = [];
 	}
 
-	getName(name) {
+	getName() {
 		return this.name;
 	}
 
