@@ -76,7 +76,6 @@ function goPreviewsQuestion() {
 function updateProgressBar() {
 	smillBarText.innerHTML = 'Question ' + (questionNumber + 1) + ' from ' + questions.length;
 	let widthBar = ((questionNumber + 1) * 100) /  questions.length;
-	console.log(widthBar);
 	smillBarFill.style.width = widthBar + '%';
 }
 
@@ -84,22 +83,36 @@ function getStartTime() {
 	startTime = new Date();
 }
 
-function updateTime() {  
+function updateTime() { 
+	let secondsCount = 0;
+	let minutesCount = 0;
+	let minutes = 0;
+	let hours = 0; 
 	setInterval(() => {
 	let currentTime = new Date(); 
 	let resultTime = currentTime - startTime;
 	let seconds = Math.round(resultTime/1000);
-	let minutes = Math.round(seconds/60);
-	let hours = Math.round(minutes/60);
+	if (seconds == 60) {
+		minutes++;
+		secondsCount++;
+	}
+	if (minutes == 60) {
+		hours++;
+		minutesCount++;
+	}
+	let calculateSeconds = seconds - (secondsCount * 60);
+	let calculatedMinutes = minutes - (minutesCount * 60);
 	let time;
-	if (hours > 1) {
-		time = hours + ':' + minutes + ':' + seconds;
-	} else if(minutes > 1) {
-		time = minutes + ':' + seconds;
-	} else if(seconds > 9) {
-		time = '00:' + seconds;
+	if (hours > 0) {
+		time = hours + ':' + calculatedMinutes + ':' + calculateSeconds;
+	} else if(calculatedMinutes > 0 && calculateSeconds > 9) {
+		time = calculatedMinutes + ':' + calculateSeconds;
+	} else if (calculatedMinutes > 0) {
+		time = calculatedMinutes + ':0' + calculateSeconds;
+	} else if(calculateSeconds > 9) {
+		time = '00:' + calculateSeconds;
 	} else {
-		time = '00:0' + seconds; 
+		time = '00:0' + calculateSeconds; 
 	}
   smillTime.innerHTML = time;}, 1000);
 }
