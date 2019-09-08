@@ -12,7 +12,7 @@ const main = document.querySelector("main");
 const testBodyIQ = document.querySelector(".iq_test");
 const testBodyIA = document.querySelector(".ia_test");
 const testBodyMBTI = document.querySelector(".mbti_test");
-const testBodySMIL = document.querySelector(".smil_test");
+const testBodySMIL = document.querySelector(".test__smil");
 
 console.log(testBodyMBTI);
 console.log(testBodySMIL);
@@ -28,13 +28,6 @@ function showTest(button, elementToHide, elementToShow) {
     button.addEventListener("click", function() {
         elementToHide.style.display = "none";
         elementToShow.style.display = "block";
-        if(elementToShow == testBodySMIL){
-            elementToShow.style.display = "flex";
-            updateQuestion();
-            updateProgressBar();
-            getStartTime();
-            updateTime();
-        }
     });
 }
 
