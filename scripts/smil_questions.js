@@ -1,4 +1,4 @@
-let questionsList = ['I always tell only the truth.',
+let questionsListSmil = ['I always tell only the truth.',
 	                   'My affairs are worse than others.',
 	                   'I will not begin to tell everything about myself to even a loved one.',
 	                   'I am a completely healthy person.',

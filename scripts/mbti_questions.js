@@ -1,4 +1,4 @@
-let questionsList = ['Once in the new team',
+let questionsListMbti = ['Once in the new team',
 	                   'They say about me that I am human',
 	                   'I prefer',
 	                   'I more often',
@@ -9,7 +9,7 @@ let questionsList = ['Once in the new team',
 	                   'In the dialogue',
 	                   'In communication'];
 
-let answersFirstList = ['i immediately get the spotlight.',
+let answersFirstListMbti = ['i immediately get the spotlight.',
 	                      'judicious.',
 	                      'plan your day in advance and clearly understand the list of tasks for the day.',
 	                      'in my thoughts, thoughts on new ideas, I can fantasize.',
@@ -20,7 +20,7 @@ let answersFirstList = ['i immediately get the spotlight.',
 	                      'I say more.',
 	                      'I can happily support philosophical topics, talk about new discoveries and theoretical concepts.'];
 
-let answersSecondList = ['i am in the shade, eyeing people.',
+let answersSecondListMbti = ['i am in the shade, eyeing people.',
 	                       'sensitive and sincere.',
 	                       'stay flexible throughout the day and be able to change your plans.',
 	                       'solve specific pressing problems in the situation "here and now", it is difficult to call me a dreamer.',

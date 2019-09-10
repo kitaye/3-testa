@@ -118,7 +118,46 @@
 
 <!--    MBTI test-->
     <div class="test__mbti">
-        
+         <div id="test__mbti-intro" class="test__mbti-intro">
+            <h1 class="mbti-intro__header">TEST MBTI</h1>
+            <div class="mbti-intro__explain">
+                1. No questions, even the most detailed questionnaire,<br>
+                can cover all human behavior. This test allows you<br>
+                to "outline the framework" and indicates a bias, and not the<br>
+                comprehensive dominance of some properties over others.<br>
+            </div>
+            <div class="mbti-intro__explain">
+                2. Regardless of belonging to any type,each person uses bothpoles of<br>
+                preference in everyday life, but to a different extent. For example,<br>
+                we can be sociable with good friends,but more often be introverts.<br>
+            </div>
+            <div class="mbti-intro__explain">
+                3. When answering the question, choose the option that seems most<br>
+                preferable and comfortable for you in most life situations. If both<br>
+                options do not like, then choose the least unattractive option.<br>
+            </div>
+            <div class="mbti-intro__explain">
+                4. After passing the test, you will not only learn your personality type,<br>
+                but also get a small explanation of the result. Do not forget to answer<br>
+                all the questions, for this it is most convenient to go in order.<br>
+            </div>
+            <div class="mbti-intro__start">
+                <div class="mbti-intro__start-hint">Enter your name please</div>
+                <input id="mbti-intro__start-name" class="mbti-intro__start-name" maxlength="20" size="30" value="Name">
+                <button id="mbti-intro__start-button" class="mbti-intro__start-button">Start Test</button>
+            </div>
+        </div>
+        <div class="test__mbti-wrapper">
+            <div class="mbti__progressbar">
+            </div>
+            <div class="mbti__question">
+                <div class="mbti__question-number"></div>
+                <div class="mbti__question-text"></div>
+            </div>
+            <div class="mbti__answers">
+                <div class="mbti__answers-text"></div>
+            </div>
+        </div>
     </div>
 
 <!--    SMIL test-->
@@ -186,7 +225,7 @@
 </section>
 <script src="scripts/user.js"></script>
 <script src="scripts/mbti_script.js"></script>
-v<script src="scripts/smil_questions.js"></script>
+<script src="scripts/smil_questions.js"></script>
 <script src="scripts/smil_script.js"></script>
 <script src="script.js"></script>
 </body>

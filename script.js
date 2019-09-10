@@ -11,7 +11,7 @@ const main = document.querySelector("main");
 //Tests section
 const testBodyIQ = document.querySelector(".iq_test");
 const testBodyIA = document.querySelector(".ia_test");
-const testBodyMBTI = document.querySelector(".mbti_test");
+const testBodyMBTI = document.querySelector(".test__mbti");
 const testBodySMIL = document.querySelector(".test__smil");
 
 console.log(testBodyMBTI);
