@@ -1,5 +1,5 @@
-let questionNumber = 0;
-let questions = readQuestionList();
+let smilQuestionNumber= 0;
+let questions = readSmilQuestionList();
 let smillQuestion = document.getElementById('smil__question');
 let smillBarFill = document.getElementById('smil__nav-progress-bar-fill');
 let smillBarText = document.getElementById('smill__question-count');
@@ -14,10 +14,10 @@ let smillUser;
 document.addEventListener('click', (event) => catchSmilClick(event));
 
 function catchSmilClick(event) {
-	const elementId = event.target.id
+	const elementId = event.target.id;
 	switch(elementId) {
 		case 'smil-intro__start-button':
-			startTest();
+			startSmilTest();
 			break;
 		case 'smil__nav-back-button':
 			goPreviewsQuestion();
@@ -25,31 +25,31 @@ function catchSmilClick(event) {
 			updateProgressBar();
 			break;
 		case 'smil__button-right':
-			if((questionNumber + 1) == questions.length){
+			if((smilQuestionNumber + 1) == questions.length){
 				endTest();
 				break;
 			}
-			addAnswer('yes', questionNumber);
+			addAnswer('yes', smilQuestionNumber);
 			goNetxQuestion();
 			updateQuestion();
 			updateProgressBar();
 			break;
 		case 'smil__button-wrong':
-			if((questionNumber + 1) == questions.length){
+			if((smilQuestionNumber + 1) == questions.length){
 				endTest();
 				break;
 			}
-			addAnswer('no', questionNumber);
+			addAnswer('no', smilQuestionNumber);
 			goNetxQuestion();
 			updateQuestion();
 			updateProgressBar();
 			break;
 		case 'smil__button-unknown':
-			if((questionNumber + 1) == questions.length){
+			if((smilQuestionNumber + 1) == questions.length){
 				endTest();
 				break;
 			}
-			addAnswer('unknow', questionNumber);
+			addAnswer('unknow', smilQuestionNumber);
 			goNetxQuestion();
 			updateQuestion();
 			updateProgressBar();
@@ -57,7 +57,7 @@ function catchSmilClick(event) {
 	}
 }
 
-function startTest() {
+function startSmilTest() {
 	smillIntro.style.display = 'none';
 	smillWrapper.style.display = 'flex';
 	smillUser = new User(smillNameField.value);
@@ -105,18 +105,8 @@ function formResult() {
 	resultIntroversion.innerHTML = 'Introversion - 3 (isolation)';
 }
 
-function readQuestionList() {
-	let questionsList = ['I always tell only the truth.',
-	                 'My affairs are worse than others.',
-	                 'I will not begin to tell everything about myself to even a loved one.',
-	                 'I am a completely healthy person.',
-	                 'I often have a sad mood.',
-	                 'I do not care if the people around me like me.',
-	                 'I strive to succeed in life.',
-	                 'My character is too soft.',
-	                 'I strive to defend my opinion at all costs.',
-	                 'Often I worry about nothing.']
-	return questionsList;
+function readSmilQuestionList() {
+	return smilQuestionsList;
 }
 
 function addAnswer(answer, number) {
@@ -124,25 +114,25 @@ function addAnswer(answer, number) {
 }
 
 function updateQuestion() {
-	let question = questions[questionNumber];
+	let question = questions[smilQuestionNumber];
 	smillQuestion.innerHTML = question;
 }
 
 function goNetxQuestion() {
-	if(questionNumber < questions.length - 1) {
-		questionNumber++;
+	if(smilQuestionNumber < questions.length - 1) {
+		smilQuestionNumber++;
 	}
 }
 
 function goPreviewsQuestion() {
-	if(questionNumber > 0) {
-		questionNumber--;
+	if(smilQuestionNumber > 0) {
+		smilQuestionNumber--;
 	}
 }
 
 function updateProgressBar() {
-	smillBarText.innerHTML = 'Question ' + (questionNumber + 1) + ' from ' + questions.length;
-	let widthBar = ((questionNumber + 1) * 100) /  questions.length;
+	smillBarText.innerHTML = 'Question ' + (smilQuestionNumber + 1) + ' from ' + questions.length;
+	let widthBar = ((smilQuestionNumber + 1) * 100) /  questions.length;
 	smillBarFill.style.width = widthBar + '%';
 }
 
