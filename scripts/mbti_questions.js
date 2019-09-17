@@ -1,0 +1,32 @@
+let questionsListMbti = ['Once in the new team',
+	                   'They say about me that I am human',
+	                   'I prefer',
+	                   'I more often',
+	                   'In work, the opportunity is more important to me',
+	                   'More important to me',
+	                   'In evaluating other people, I rely',
+	                   'When the situation changes unexpectedly',
+	                   'In the dialogue',
+	                   'In communication'];
+
+let answersFirstListMbti = ['i immediately get the spotlight.',
+	                      'judicious.',
+	                      'plan your day in advance and clearly understand the list of tasks for the day.',
+	                      'in my thoughts, thoughts on new ideas, I can fantasize.',
+	                      'focus and think about the task alone.',
+	                      'creativity, monotony depresses me.',
+	                      'on your feelings and attitude towards a person.',
+	                      'it unsettle me.',
+	                      'I say more.',
+	                      'I can happily support philosophical topics, talk about new discoveries and theoretical concepts.'];
+
+let answersSecondListMbti = ['i am in the shade, eyeing people.',
+	                       'sensitive and sincere.',
+	                       'stay flexible throughout the day and be able to change your plans.',
+	                       'solve specific pressing problems in the situation "here and now", it is difficult to call me a dreamer.',
+	                       'discuss certain solutions with colleagues.',
+	                       'practical approach, I will not reinvent the wheel, if everything works like that.',
+	                       'on the assessment of specific acts and conclusions based on them.',
+	                       'I am calmly rebuilding.',
+	                       'I listen more.',
+	                       'I do not like when people philosophize, practical actions and proven schemes are important, not abstract theories.'];
